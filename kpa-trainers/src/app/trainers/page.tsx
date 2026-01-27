@@ -1,12 +1,14 @@
+import { Hero } from '@/components/landing/Hero';
+import { TrainerGrid } from '@/components/landing/TrainerGrid';
+import { getAllTrainers } from '@/data/trainers';
+
 export default function TrainersPage() {
+  const trainers = getAllTrainers();
+
   return (
-    <div className="container-mobile py-8">
-      <h1 className="text-2xl font-bold text-maroon-800">
-        Meet Our Master Trainers
-      </h1>
-      <p className="text-gray-600 mt-2">
-        Coming soon...
-      </p>
-    </div>
+    <>
+      <Hero />
+      <TrainerGrid trainers={trainers} />
+    </>
   );
 }
