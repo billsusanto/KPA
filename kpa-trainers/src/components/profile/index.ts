@@ -1,0 +1,9 @@
+export { TrainerHero } from './TrainerHero';
+export { StatsBar } from './StatsBar';
+export { VideoPlayer } from './VideoPlayer';
+export { Biography } from './Biography';
+export { Certifications } from './Certifications';
+export { ClassOfferings } from './ClassOfferings';
+export { ReviewCard } from './ReviewCard';
+export { ReviewSection } from './ReviewSection';
+export { ContactCTA } from './ContactCTA';

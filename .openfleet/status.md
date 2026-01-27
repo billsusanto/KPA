@@ -6,7 +6,7 @@ Shared anchor point for all agents. Read this first before starting any task.
 
 **Story**: `kpa-trainers`
 **Branch**: `main` (will create `feat/kpa-trainers`)
-**Task**: Phase 1 - Foundation (COMPLETED)
+**Task**: Phase 3 - Trainer Profile (COMPLETED)
 
 ## Context Files
 
@@ -49,15 +49,15 @@ A static Next.js website to showcase Kaizen Pilates Academy master trainers.
 - [ ] Trainer card component
 - [ ] Mobile-responsive grid
 
-**Phase 3: Trainer Profile** (pending)
-- [ ] TrainerHero (photo + name + tagline)
-- [ ] StatsBar (4 stats)
-- [ ] VideoPlayer (local video)
-- [ ] Biography section
-- [ ] Certifications badges
-- [ ] Class offerings list
-- [ ] Review section with cards
-- [ ] ContactCTA (WhatsApp placeholder)
+**Phase 3: Trainer Profile** (COMPLETED)
+- [x] TrainerHero (photo + name + tagline)
+- [x] StatsBar (4 stats)
+- [x] VideoPlayer (local video)
+- [x] Biography section
+- [x] Certifications badges
+- [x] Class offerings list
+- [x] Review section with cards
+- [x] ContactCTA (WhatsApp button)
 
 **Phase 4: Polish & Deploy** (pending)
 - [ ] Animations and transitions
