@@ -1,6 +1,0 @@
-{
-  "buildCommand": "cd kpa-trainers && npm install && npm run build",
-  "outputDirectory": "kpa-trainers/.next",
-  "framework": "nextjs",
-  "installCommand": "cd kpa-trainers && npm install"
-}
