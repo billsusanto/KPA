@@ -31,10 +31,12 @@ export function Header() {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gradient-to-br from-maroon-700 to-maroon-800 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         visible ? 'translate-y-0' : '-translate-y-full'
       } ${
-        scrolled ? 'shadow-lg shadow-maroon-900/30' : ''
+        scrolled 
+          ? 'bg-gradient-to-br from-maroon-700 to-maroon-800 shadow-lg shadow-maroon-900/30' 
+          : 'bg-transparent'
       }`}
     >
       <div className="container-mobile py-4">
