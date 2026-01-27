@@ -2,16 +2,22 @@ import { Review } from '@/types';
 
 interface ReviewCardProps {
   review: Review;
+  index?: number;
 }
 
-export function ReviewCard({ review }: ReviewCardProps) {
+export function ReviewCard({ review, index = 0 }: ReviewCardProps) {
+  const initials = review.author.split(' ').map(n => n[0]).join('');
+  
   return (
-    <article className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
-      <div className="flex gap-1 mb-3">
+    <article 
+      className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm border-l-4 border-gold-400 opacity-0 animate-fade-in-up"
+      style={{ animationDelay: `${index * 100}ms` }}
+    >
+      <div className="flex gap-1.5 mb-4">
         {Array.from({ length: 5 }).map((_, i) => (
           <svg
             key={i}
-            className={`w-4 h-4 ${i < review.rating ? 'text-gold-400' : 'text-gray-200'}`}
+            className={`w-5 h-5 ${i < review.rating ? 'text-gold-400' : 'text-gray-200'}`}
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -20,15 +26,20 @@ export function ReviewCard({ review }: ReviewCardProps) {
         ))}
       </div>
 
-      <blockquote className="text-gray-700 text-sm leading-relaxed mb-4">
+      <blockquote className="text-gray-700 text-lg italic leading-relaxed mb-6 font-body">
         &ldquo;{review.text}&rdquo;
       </blockquote>
 
-      <footer className="flex items-center justify-between text-sm">
-        <span className="font-medium text-gray-900">{review.author}</span>
-        {review.date && (
-          <time className="text-gray-500">{review.date}</time>
-        )}
+      <footer className="flex items-center gap-4">
+        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-maroon-500 to-maroon-700 flex items-center justify-center flex-shrink-0">
+          <span className="text-white text-sm font-semibold font-display">{initials}</span>
+        </div>
+        <div>
+          <span className="font-medium text-gray-900 font-body">{review.author}</span>
+          {review.date && (
+            <time className="block text-sm text-gray-500 font-body">{review.date}</time>
+          )}
+        </div>
       </footer>
     </article>
   );

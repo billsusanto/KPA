@@ -6,38 +6,45 @@ interface TrainerHeroProps {
 }
 
 export function TrainerHero({ trainer }: TrainerHeroProps) {
+  const initials = trainer.name.split(' ').map(n => n[0]).join('');
+  
   return (
-    <section className="bg-gradient-to-br from-maroon-700 to-maroon-800 pt-4 pb-8">
-      <div className="container-mobile">
+    <section className="relative bg-gradient-to-br from-maroon-700 via-maroon-800 to-maroon-900 pt-6 pb-16 lg:pb-24 overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-maroon-600/30 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-gold-500/10 via-transparent to-transparent" />
+      
+      <div className="container-mobile relative z-10">
         <Link
           href="/trainers"
-          className="inline-flex items-center gap-1.5 text-maroon-200 hover:text-white transition-colors text-sm mb-6 hover:gap-2.5"
+          className="group inline-flex items-center gap-2 text-maroon-200 hover:text-white transition-all duration-300 text-sm mb-10 font-body"
         >
-          <svg className="w-4 h-4 transition-transform duration-200 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
-          Back to Trainers
+          <span>Back to Trainers</span>
         </Link>
 
-        <div className="aspect-square max-w-[200px] mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300 border-4 border-white/20 animate-fade-in">
-          <div className="w-full h-full flex items-center justify-center">
-            <span className="text-6xl text-gray-400">{trainer.name.charAt(0)}</span>
+        <div className="relative mx-auto mb-8 w-48 h-48 lg:w-56 lg:h-56">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-gold-400/30 to-maroon-500/30 animate-pulse-glow" />
+          <div className="relative w-full h-full rounded-full bg-gradient-to-br from-maroon-500 via-maroon-600 to-maroon-700 border-4 border-white/20 flex items-center justify-center overflow-hidden animate-fade-in shadow-2xl">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold-400/20 to-transparent" />
+            <span className="text-7xl lg:text-8xl font-display font-bold text-white/90 relative z-10">{initials}</span>
           </div>
         </div>
 
-        <div className="text-center animate-fade-in opacity-0 animation-delay-200" style={{ animationFillMode: 'forwards' }}>
-          <h1 className="text-2xl font-bold text-white">{trainer.name}</h1>
-          <p className="text-maroon-200 mt-1">{trainer.title}</p>
-          <p className="text-white/80 text-sm mt-3 italic">&ldquo;{trainer.tagline}&rdquo;</p>
+        <div className="text-center opacity-0 animate-fade-in-up animation-delay-200" style={{ animationFillMode: 'forwards' }}>
+          <h1 className="font-display text-4xl lg:text-5xl font-bold text-white tracking-tight">{trainer.name}</h1>
+          <p className="text-maroon-200 mt-2 text-lg font-body">{trainer.title}</p>
+          <p className="text-white/80 text-base lg:text-lg mt-5 italic font-body max-w-xl mx-auto leading-relaxed">&ldquo;{trainer.tagline}&rdquo;</p>
 
           {(trainer.socialLinks.instagram || trainer.socialLinks.facebook) && (
-            <div className="flex justify-center gap-4 mt-4">
+            <div className="flex justify-center gap-5 mt-6">
               {trainer.socialLinks.instagram && (
                 <a
                   href={trainer.socialLinks.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-maroon-200 hover:text-white transition-all duration-200 hover:scale-110"
+                  className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-maroon-200 hover:text-white hover:bg-white/20 transition-all duration-300 hover:scale-110"
                   aria-label="Instagram"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -50,7 +57,7 @@ export function TrainerHero({ trainer }: TrainerHeroProps) {
                   href={trainer.socialLinks.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-maroon-200 hover:text-white transition-all duration-200 hover:scale-110"
+                  className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-maroon-200 hover:text-white hover:bg-white/20 transition-all duration-300 hover:scale-110"
                   aria-label="Facebook"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

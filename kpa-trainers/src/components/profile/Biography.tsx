@@ -7,14 +7,14 @@ export function Biography({ biography, name }: BiographyProps) {
   const paragraphs = biography.split('\n\n').filter(Boolean);
 
   return (
-    <section className="py-8 animate-fade-in">
+    <section className="py-12 lg:py-16 animate-fade-in">
       <div className="container-mobile">
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">
+        <h2 className="font-display text-2xl lg:text-3xl font-semibold text-gray-900 mb-6">
           About {name}
         </h2>
-        <div className="space-y-4">
+        <div className="space-y-6">
           {paragraphs.map((paragraph, index) => (
-            <p key={index} className="text-gray-700 leading-relaxed">
+            <p key={index} className="text-gray-700 text-lg leading-relaxed font-body" style={{ lineHeight: '1.8' }}>
               {paragraph}
             </p>
           ))}
