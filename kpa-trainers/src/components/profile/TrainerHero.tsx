@@ -9,7 +9,7 @@ export function TrainerHero({ trainer }: TrainerHeroProps) {
   const initials = trainer.name.split(' ').map(n => n[0]).join('');
   
   return (
-    <section className="relative bg-gradient-to-br from-maroon-700 via-maroon-800 to-maroon-900 pt-6 pb-16 lg:pb-24 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-maroon-700 via-maroon-800 to-maroon-900 pt-24 pb-16 lg:pt-28 lg:pb-24 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-maroon-600/30 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-gold-500/10 via-transparent to-transparent" />
       

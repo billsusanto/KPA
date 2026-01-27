@@ -1,6 +1,6 @@
 export function Hero() {
   return (
-    <section className="relative min-h-[70vh] bg-gradient-to-br from-maroon-700 via-maroon-800 to-maroon-900 py-24 lg:py-32 overflow-hidden">
+    <section className="relative min-h-[70vh] bg-gradient-to-br from-maroon-700 via-maroon-800 to-maroon-900 pt-28 pb-24 lg:pt-36 lg:pb-32 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-maroon-600/30 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-gold-500/10 via-transparent to-transparent" />
       
