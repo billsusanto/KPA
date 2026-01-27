@@ -7,8 +7,29 @@ import { Footer } from '@/components/layout/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Master Trainers | Kaizen Pilates Academy',
+  title: {
+    default: 'Master Trainers | Kaizen Pilates Academy',
+    template: '%s | Kaizen Pilates Academy',
+  },
   description: 'Meet our certified master trainers at Kaizen Pilates Academy. Expert instruction in Reformer, Mat Pilates, and specialized programs.',
+  keywords: ['pilates', 'trainer', 'kaizen pilates', 'reformer', 'mat pilates', 'indonesia'],
+  authors: [{ name: 'Kaizen Pilates Academy' }],
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Kaizen Pilates Academy',
+    title: 'Master Trainers | Kaizen Pilates Academy',
+    description: 'Meet our certified master trainers at Kaizen Pilates Academy.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Master Trainers | Kaizen Pilates Academy',
+    description: 'Meet our certified master trainers at Kaizen Pilates Academy.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

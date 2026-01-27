@@ -7,7 +7,7 @@ export function Biography({ biography, name }: BiographyProps) {
   const paragraphs = biography.split('\n\n').filter(Boolean);
 
   return (
-    <section className="py-8">
+    <section className="py-8 animate-fade-in">
       <div className="container-mobile">
         <h2 className="text-lg font-semibold text-gray-900 mb-4">
           About {name}

@@ -11,21 +11,21 @@ export function TrainerHero({ trainer }: TrainerHeroProps) {
       <div className="container-mobile">
         <Link
           href="/trainers"
-          className="inline-flex items-center gap-1.5 text-maroon-200 hover:text-white transition-colors text-sm mb-6"
+          className="inline-flex items-center gap-1.5 text-maroon-200 hover:text-white transition-colors text-sm mb-6 hover:gap-2.5"
         >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 transition-transform duration-200 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
           Back to Trainers
         </Link>
 
-        <div className="aspect-square max-w-[200px] mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300 border-4 border-white/20">
+        <div className="aspect-square max-w-[200px] mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300 border-4 border-white/20 animate-fade-in">
           <div className="w-full h-full flex items-center justify-center">
             <span className="text-6xl text-gray-400">{trainer.name.charAt(0)}</span>
           </div>
         </div>
 
-        <div className="text-center">
+        <div className="text-center animate-fade-in opacity-0 animation-delay-200" style={{ animationFillMode: 'forwards' }}>
           <h1 className="text-2xl font-bold text-white">{trainer.name}</h1>
           <p className="text-maroon-200 mt-1">{trainer.title}</p>
           <p className="text-white/80 text-sm mt-3 italic">&ldquo;{trainer.tagline}&rdquo;</p>
@@ -37,7 +37,7 @@ export function TrainerHero({ trainer }: TrainerHeroProps) {
                   href={trainer.socialLinks.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-maroon-200 hover:text-white transition-colors"
+                  className="text-maroon-200 hover:text-white transition-all duration-200 hover:scale-110"
                   aria-label="Instagram"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -50,7 +50,7 @@ export function TrainerHero({ trainer }: TrainerHeroProps) {
                   href={trainer.socialLinks.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-maroon-200 hover:text-white transition-colors"
+                  className="text-maroon-200 hover:text-white transition-all duration-200 hover:scale-110"
                   aria-label="Facebook"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

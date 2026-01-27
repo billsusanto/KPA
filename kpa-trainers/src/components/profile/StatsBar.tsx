@@ -16,9 +16,13 @@ export function StatsBar({ stats }: StatsBarProps) {
     <section className="bg-gray-50 py-6">
       <div className="container-mobile">
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {statItems.map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-2xl font-bold text-gold-500">{stat.value}</div>
+          {statItems.map((stat, index) => (
+            <div 
+              key={stat.label} 
+              className="text-center opacity-0 animate-scale-in"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <div className="text-2xl font-bold text-gold-500 hover:scale-110 transition-transform duration-200">{stat.value}</div>
               <div className="text-xs text-gray-600 mt-1">{stat.label}</div>
             </div>
           ))}

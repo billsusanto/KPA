@@ -34,6 +34,17 @@ export async function generateMetadata({ params }: TrainerPageProps): Promise<Me
   return {
     title: `${trainer.name} - ${trainer.title} | Kaizen Pilates Academy`,
     description: `${trainer.tagline}. ${trainer.stats.yearsExperience} years of experience. ${trainer.certifications.join(', ')}.`,
+    openGraph: {
+      title: `${trainer.name} - ${trainer.title}`,
+      description: trainer.tagline,
+      type: 'profile',
+      siteName: 'Kaizen Pilates Academy',
+    },
+    twitter: {
+      card: 'summary',
+      title: `${trainer.name} - ${trainer.title}`,
+      description: trainer.tagline,
+    },
   };
 }
 

@@ -5,7 +5,7 @@ interface CertificationsProps {
 
 export function Certifications({ certifications, specializations }: CertificationsProps) {
   return (
-    <section className="py-8 bg-gray-50">
+    <section className="py-8 bg-gray-50 animate-fade-in">
       <div className="container-mobile">
         <h2 className="text-lg font-semibold text-gray-900 mb-4">
           Certifications & Specializations
@@ -18,7 +18,7 @@ export function Certifications({ certifications, specializations }: Certificatio
               {certifications.map((cert) => (
                 <span
                   key={cert}
-                  className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-maroon-700 text-white"
+                  className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-maroon-700 text-white hover:bg-maroon-600 transition-colors duration-200"
                 >
                   {cert}
                 </span>
@@ -32,7 +32,7 @@ export function Certifications({ certifications, specializations }: Certificatio
               {specializations.map((spec) => (
                 <span
                   key={spec}
-                  className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-gold-400 text-gray-900"
+                  className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-gold-400 text-gray-900 hover:bg-gold-500 transition-colors duration-200"
                 >
                   {spec}
                 </span>
