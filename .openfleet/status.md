@@ -6,7 +6,7 @@ Shared anchor point for all agents. Read this first before starting any task.
 
 **Story**: `kpa-trainers`
 **Branch**: `main` (will create `feat/kpa-trainers`)
-**Task**: Phase 1 - Foundation (pending)
+**Task**: Phase 1 - Foundation (COMPLETED)
 
 ## Context Files
 
@@ -36,12 +36,12 @@ A static Next.js website to showcase Kaizen Pilates Academy master trainers.
 **Tech Stack**: Next.js 14, React, Tailwind CSS, Vercel
 **Design**: Mobile-first, Indonesian maroon theme
 
-**Phase 1: Foundation** (pending)
-- [ ] Create Next.js project with Tailwind CSS
-- [ ] Configure maroon color theme
-- [ ] Create layout components (Header, Footer)
-- [ ] Set up project structure
-- [ ] Create types and sample data (1 trainer)
+**Phase 1: Foundation** (COMPLETED)
+- [x] Create Next.js project with Tailwind CSS
+- [x] Configure maroon color theme (adapted for Tailwind v4)
+- [x] Create layout components (Header, Footer)
+- [x] Set up project structure
+- [x] Create types and sample data (1 trainer: Sarah Tan)
 
 **Phase 2: Landing Page** (pending)
 - [ ] Hero section
