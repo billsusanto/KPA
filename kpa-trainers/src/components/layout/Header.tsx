@@ -1,26 +1,42 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 export function Header() {
+  const [visible, setVisible] = useState(true);
   const [scrolled, setScrolled] = useState(false);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      const currentScrollY = window.scrollY;
+      
+      setScrolled(currentScrollY > 20);
+      
+      if (currentScrollY < 100) {
+        setVisible(true);
+      } else if (currentScrollY < lastScrollY.current) {
+        setVisible(true);
+      } else if (currentScrollY > lastScrollY.current + 10) {
+        setVisible(false);
+      }
+      
+      lastScrollY.current = currentScrollY;
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <header 
-      className={`sticky top-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        visible ? 'translate-y-0' : '-translate-y-full'
+      } ${
         scrolled 
           ? 'glass border-b border-gray-100/50 shadow-sm' 
-          : 'bg-transparent'
+          : 'bg-white'
       }`}
     >
       <div className="container-mobile py-5">

@@ -51,7 +51,7 @@ export default function RootLayout({
     <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
       <body className="font-body min-h-screen flex flex-col">
         <Header />
-        <main className="flex-1">
+        <main className="flex-1 pt-[72px]">
           {children}
         </main>
         <Footer />
