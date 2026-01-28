@@ -3,28 +3,35 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Refined maroon palette */
-  --color-maroon-50: #fef7f7;
-  --color-maroon-100: #fee2e2;
-  --color-maroon-200: #fecaca;
-  --color-maroon-300: #fca5a5;
-  --color-maroon-400: #f87171;
-  --color-maroon-500: #ef4444;
-  --color-maroon-600: #dc2626;
-  --color-maroon-700: #b91c1c;
-  --color-maroon-800: #991b1b;
-  --color-maroon-900: #7f1d1d;
-  --color-maroon-950: #450a0a;
+  /* Navy Blue palette (primary) */
+  --color-navy-50: #f0f4fa;
+  --color-navy-100: #dbe4f3;
+  --color-navy-200: #bcccea;
+  --color-navy-300: #8fa9db;
+  --color-navy-400: #5c7fc4;
+  --color-navy-500: #3d5fa8;
+  --color-navy-600: #2d4a8c;
+  --color-navy-700: #1E3A7B;
+  --color-navy-800: #1a3269;
+  --color-navy-900: #162a55;
+  --color-navy-950: #0e1b38;
   
-  /* Warm gold palette */
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
+  /* Red accent palette */
+  --color-accent-50: #fef2f3;
+  --color-accent-100: #fde6e8;
+  --color-accent-200: #fbd0d5;
+  --color-accent-300: #f7a8b2;
+  --color-accent-400: #f17486;
+  --color-accent-500: #e54860;
+  --color-accent-600: #C41E3A;
+  --color-accent-700: #a51a32;
+  --color-accent-800: #8a192e;
+  --color-accent-900: #771a2c;
+  --color-accent-950: #420a14;
   
-  /* Cream for softness */
-  --color-cream: #FEF7ED;
-  --color-cream-dark: #FDF2E4;
+  /* Keep cream for warmth */
+  --color-cream: #FEF9F5;
+  --color-cream-dark: #FDF5EE;
   
   /* Typography */
   --font-display: 'Playfair Display', Georgia, serif;
@@ -108,8 +115,8 @@
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(185, 28, 28, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(185, 28, 28, 0.5); }
+  0%, 100% { box-shadow: 0 0 20px rgba(30, 58, 123, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(30, 58, 123, 0.5); }
 }
 
 @layer utilities {
@@ -144,11 +151,11 @@
   .animation-delay-500 { animation-delay: 500ms; }
   
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-maroon-700 to-maroon-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-navy-700 to-navy-500;
   }
   
-  .text-gradient-gold {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-400 to-gold-600;
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-500 to-accent-700;
   }
   
   .glass {
@@ -156,7 +163,7 @@
   }
   
   .glass-dark {
-    @apply bg-maroon-900/80 backdrop-blur-xl;
+    @apply bg-navy-900/80 backdrop-blur-xl;
   }
 }
 

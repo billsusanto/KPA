@@ -10,14 +10,14 @@ export function ReviewCard({ review, index = 0 }: ReviewCardProps) {
   
   return (
     <article 
-      className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm border-l-4 border-gold-400 opacity-0 animate-fade-in-up"
+      className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm border-l-4 border-accent-600 opacity-0 animate-fade-in-up"
       style={{ animationDelay: `${index * 100}ms` }}
     >
       <div className="flex gap-1.5 mb-4">
         {Array.from({ length: 5 }).map((_, i) => (
           <svg
             key={i}
-            className={`w-5 h-5 ${i < review.rating ? 'text-gold-400' : 'text-gray-200'}`}
+            className={`w-5 h-5 ${i < review.rating ? 'text-accent-500' : 'text-gray-200'}`}
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -31,7 +31,7 @@ export function ReviewCard({ review, index = 0 }: ReviewCardProps) {
       </blockquote>
 
       <footer className="flex items-center gap-4">
-        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-maroon-500 to-maroon-700 flex items-center justify-center flex-shrink-0">
+        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-navy-500 to-navy-700 flex items-center justify-center flex-shrink-0">
           <span className="text-white text-sm font-semibold font-display">{initials}</span>
         </div>
         <div>

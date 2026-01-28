@@ -18,9 +18,9 @@ export function Certifications({ certifications, specializations }: Certificatio
               {certifications.map((cert) => (
                 <span
                   key={cert}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium bg-maroon-50 text-maroon-800 ring-1 ring-maroon-200/50 hover:bg-maroon-100 transition-colors duration-200 font-body"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium bg-navy-50 text-navy-800 ring-1 ring-navy-200/50 hover:bg-navy-100 transition-colors duration-200 font-body"
                 >
-                  <svg className="w-4 h-4 text-maroon-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-navy-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                   </svg>
                   {cert}
@@ -35,9 +35,9 @@ export function Certifications({ certifications, specializations }: Certificatio
               {specializations.map((spec) => (
                 <span
                   key={spec}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium bg-gold-50 text-gold-700 ring-1 ring-gold-300/50 hover:bg-gold-100 transition-colors duration-200 font-body"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium bg-accent-50 text-accent-700 ring-1 ring-accent-300/50 hover:bg-accent-100 transition-colors duration-200 font-body"
                 >
-                  <svg className="w-4 h-4 text-gold-500" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-accent-500" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                   </svg>
                   {spec}

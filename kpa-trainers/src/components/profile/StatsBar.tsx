@@ -22,7 +22,7 @@ export function StatsBar({ stats }: StatsBarProps) {
               className="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100/50 opacity-0 animate-scale-in hover:shadow-md transition-shadow duration-300"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="font-display text-3xl lg:text-4xl font-bold text-gradient-gold">{stat.value}</div>
+              <div className="font-display text-3xl lg:text-4xl font-bold text-accent-600">{stat.value}</div>
               <div className="text-sm text-gray-600 mt-2 font-body">{stat.label}</div>
             </div>
           ))}
