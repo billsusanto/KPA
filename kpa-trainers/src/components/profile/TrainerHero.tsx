@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { MasterTrainer } from '@/types';
 
 interface TrainerHeroProps {
@@ -20,17 +19,6 @@ export function TrainerHero({ trainer }: TrainerHeroProps) {
       <div className="absolute inset-0 opacity-[0.15] mix-blend-overlay bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E')]" />
       
       <div className="container-mobile relative z-10">
-        {/* Back link */}
-        <Link
-          href="/trainers"
-          className="group inline-flex items-center gap-2 text-white/60 hover:text-white transition-all duration-300 text-sm mb-10 font-body"
-        >
-          <svg className="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-          <span>Back to Trainers</span>
-        </Link>
-
         {/* Avatar with enhanced glow */}
         <div className="relative mx-auto mb-8 w-40 h-40 lg:w-52 lg:h-52">
           <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-white/10 to-charcoal-600/20 blur-xl animate-pulse-glow" />

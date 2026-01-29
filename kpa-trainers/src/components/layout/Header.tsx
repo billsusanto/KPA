@@ -40,7 +40,7 @@ export function Header() {
           : 'bg-transparent'
       }`}
     >
-      <div className="container-mobile py-4">
+      <div className="container-mobile py-4 flex items-center justify-between">
         <Link href="/trainers" className="flex items-center gap-3 group">
           <Image 
             src="/logo-kaizen.png" 
@@ -49,6 +49,13 @@ export function Header() {
             height={40} 
             className="h-10 w-auto logo-white"
           />
+        </Link>
+        
+        <Link 
+          href="/trainers" 
+          className="text-white/70 hover:text-white text-sm font-body transition-colors duration-300"
+        >
+          Trainers
         </Link>
       </div>
     </header>
