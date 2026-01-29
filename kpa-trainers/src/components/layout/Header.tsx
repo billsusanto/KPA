@@ -36,7 +36,7 @@ export function Header() {
         visible ? 'translate-y-0' : '-translate-y-full'
       } ${
         scrolled 
-          ? 'bg-charcoal-900/95 backdrop-blur-sm shadow-lg shadow-black/20' 
+          ? 'bg-cream-100/95 backdrop-blur-sm shadow-lg shadow-fusion-900/10' 
           : 'bg-transparent'
       }`}
     >
@@ -47,13 +47,13 @@ export function Header() {
             alt="Kaizen Pilates Academy" 
             width={120} 
             height={40} 
-            className="h-10 w-auto logo-white"
+            className="h-10 w-auto"
           />
         </Link>
         
         <Link 
           href="/trainers" 
-          className="text-white/70 hover:text-white text-sm font-body transition-colors duration-300"
+          className="text-fusion-700 hover:text-fusion-900 text-sm font-body transition-colors duration-300"
         >
           Trainers
         </Link>

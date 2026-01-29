@@ -10,15 +10,14 @@ export function ReviewCard({ review, index = 0 }: ReviewCardProps) {
   
   return (
     <article 
-      className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-white/10 shadow-xl opacity-0 animate-fade-in-up hover:from-white/[0.12] hover:to-white/[0.07] transition-all duration-300"
+      className="bg-cream-50 rounded-2xl p-6 lg:p-8 border border-cream-300 shadow-lg opacity-0 animate-fade-in-up hover:shadow-xl hover:border-fusion-400/30 transition-all duration-300"
       style={{ animationDelay: `${index * 150}ms` }}
     >
-      {/* Star rating */}
       <div className="flex gap-1 mb-4">
         {Array.from({ length: 5 }).map((_, i) => (
           <svg
             key={i}
-            className={`w-5 h-5 ${i < review.rating ? 'text-yellow-400' : 'text-charcoal-600'}`}
+            className={`w-5 h-5 ${i < review.rating ? 'text-fusion-500' : 'text-cream-400'}`}
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -27,20 +26,18 @@ export function ReviewCard({ review, index = 0 }: ReviewCardProps) {
         ))}
       </div>
 
-      {/* Quote */}
-      <blockquote className="text-white/90 text-lg italic leading-relaxed mb-6 font-body">
+      <blockquote className="text-fusion-800 text-lg leading-relaxed mb-6 font-body italic">
         &ldquo;{review.text}&rdquo;
       </blockquote>
 
-      {/* Author */}
       <footer className="flex items-center gap-4">
-        <div className="w-11 h-11 rounded-full bg-gradient-to-br from-charcoal-500 to-charcoal-700 flex items-center justify-center flex-shrink-0 ring-2 ring-white/10">
-          <span className="text-white text-sm font-semibold font-display">{initials}</span>
+        <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-fusion-500 to-fusion-700 flex items-center justify-center flex-shrink-0">
+          <span className="text-cream-100 text-sm font-semibold font-display">{initials}</span>
         </div>
         <div>
-          <span className="font-medium text-white font-body block">{review.author}</span>
+          <span className="font-medium text-fusion-900 font-body block">{review.author}</span>
           {review.date && (
-            <time className="text-sm text-white/50 font-body">{review.date}</time>
+            <time className="text-sm text-fusion-500 font-body">{review.date}</time>
           )}
         </div>
       </footer>
