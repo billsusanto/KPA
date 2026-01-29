@@ -43,11 +43,11 @@ export function Header() {
       <div className="container-mobile py-4">
         <Link href="/trainers" className="flex items-center gap-3 group">
           <Image 
-            src="/KPA-Logo.jpeg" 
+            src="/KPA-Logo-White.png" 
             alt="KPA Logo" 
             width={120} 
             height={40} 
-            className="h-10 w-auto logo-white"
+            className="h-10 w-auto"
           />
         </Link>
       </div>

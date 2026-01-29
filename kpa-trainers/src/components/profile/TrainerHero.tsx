@@ -9,9 +9,11 @@ export function TrainerHero({ trainer }: TrainerHeroProps) {
   const initials = trainer.name.split(' ').map(n => n[0]).join('');
   
   return (
-    <section className="relative bg-gradient-to-br from-charcoal-800 via-charcoal-900 to-charcoal-950 pt-24 pb-16 lg:pt-28 lg:pb-24 overflow-hidden">
-      {/* Texture overlay */}
-      <div className="absolute inset-0 texture-circles opacity-40" />
+    <section className="relative bg-charcoal-950 pt-24 pb-16 lg:pt-28 lg:pb-24 overflow-hidden">
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/dark-bg.png)' }}
+      />
       
       {/* Subtle radial overlays */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-charcoal-700/30 via-transparent to-transparent" />

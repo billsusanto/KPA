@@ -6,11 +6,11 @@ export function Footer() {
       <div className="container-mobile py-10 text-center">
         <div className="flex justify-center mb-4">
           <Image 
-            src="/KPA-Logo.jpeg" 
+            src="/KPA-Logo-White.png" 
             alt="KPA Logo" 
             width={120} 
             height={40} 
-            className="h-12 w-auto logo-white"
+            className="h-12 w-auto"
           />
         </div>
         <p className="text-sm text-white/60 mt-2 font-body">

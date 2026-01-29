@@ -1,8 +1,11 @@
 export function Hero() {
   return (
-    <section className="relative min-h-[70vh] bg-gradient-to-br from-charcoal-800 via-charcoal-900 to-charcoal-950 pt-28 pb-24 lg:pt-36 lg:pb-32 overflow-hidden">
-      {/* Concentric circle texture */}
-      <div className="absolute inset-0 texture-circles opacity-50" />
+    <section className="relative min-h-[70vh] bg-charcoal-950 pt-28 pb-24 lg:pt-36 lg:pb-32 overflow-hidden">
+      {/* Dark background with concentric circles */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/dark-bg.png)' }}
+      />
       
       {/* Subtle radial overlays for depth */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-charcoal-700/30 via-transparent to-transparent" />
