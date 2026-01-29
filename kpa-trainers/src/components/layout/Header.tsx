@@ -40,7 +40,7 @@ export function Header() {
         visible ? 'translate-y-0' : '-translate-y-full'
       } ${
         scrolled 
-          ? 'bg-fusion-900/80 backdrop-blur-md shadow-lg shadow-black/10' 
+          ? 'bg-cream-100/90 backdrop-blur-md shadow-lg shadow-fusion-900/10' 
           : 'bg-transparent'
       }`}
     >
@@ -52,7 +52,7 @@ export function Header() {
             width={120} 
             height={40} 
             className={`h-10 w-auto transition-all duration-300 ${
-              isProfilePage || scrolled ? 'logo-white' : ''
+              isProfilePage && !scrolled ? 'logo-white' : ''
             }`}
           />
         </Link>
@@ -60,7 +60,7 @@ export function Header() {
         <Link 
           href="/trainers" 
           className={`text-sm font-body transition-colors duration-300 ${
-            isProfilePage || scrolled 
+            isProfilePage && !scrolled 
               ? 'text-cream-200 hover:text-cream-100' 
               : 'text-fusion-700 hover:text-fusion-900'
           }`}

@@ -18,8 +18,8 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Master Trainers | Kaizen Pilates Academy',
-    template: '%s | Kaizen Pilates Academy',
+    default: 'KPA',
+    template: '%s | KPA',
   },
   description: 'Meet our certified master trainers at Kaizen Pilates Academy. Expert instruction in Reformer, Mat Pilates, and specialized programs.',
   keywords: ['pilates', 'trainer', 'kaizen pilates', 'reformer', 'mat pilates', 'indonesia'],
@@ -28,12 +28,12 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'Kaizen Pilates Academy',
-    title: 'Master Trainers | Kaizen Pilates Academy',
+    title: 'KPA',
     description: 'Meet our certified master trainers at Kaizen Pilates Academy.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Master Trainers | Kaizen Pilates Academy',
+    title: 'KPA',
     description: 'Meet our certified master trainers at Kaizen Pilates Academy.',
   },
   robots: {
