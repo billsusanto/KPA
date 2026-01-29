@@ -12,7 +12,7 @@ export function TrainerHero({ trainer }: TrainerHeroProps) {
     <section className="relative bg-charcoal-950 pt-24 pb-16 lg:pt-28 lg:pb-24 overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/dark-bg.png)' }}
+        style={{ backgroundImage: 'url(/bg-kaizen.jpg)' }}
       />
       
       {/* Subtle radial overlays */}

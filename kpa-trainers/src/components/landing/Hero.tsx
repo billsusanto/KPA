@@ -4,7 +4,7 @@ export function Hero() {
       {/* Dark background with concentric circles */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/dark-bg.png)' }}
+        style={{ backgroundImage: 'url(/bg-kaizen.jpg)' }}
       />
       
       {/* Subtle radial overlays for depth */}
