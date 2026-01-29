@@ -1,11 +1,6 @@
 export function Hero() {
   return (
-    <section className="relative min-h-[70vh] bg-fusion-950 pt-28 pb-24 lg:pt-36 lg:pb-32 overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/bg-kaizen.jpg)' }}
-      />
-      
+    <section className="relative min-h-[70vh] bg-gradient-to-b from-fusion-800 via-fusion-900 to-fusion-950 pt-28 pb-24 lg:pt-36 lg:pb-32 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-fusion-700/30 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-fusion-600/20 via-transparent to-transparent" />
       
