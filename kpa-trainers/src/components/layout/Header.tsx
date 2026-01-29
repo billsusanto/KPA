@@ -3,11 +3,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 
 export function Header() {
   const [visible, setVisible] = useState(true);
   const [scrolled, setScrolled] = useState(false);
   const lastScrollY = useRef(0);
+  const pathname = usePathname();
+  
+  const isProfilePage = pathname.startsWith('/trainers/') && pathname !== '/trainers';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,7 +40,7 @@ export function Header() {
         visible ? 'translate-y-0' : '-translate-y-full'
       } ${
         scrolled 
-          ? 'bg-cream-100/95 backdrop-blur-sm shadow-lg shadow-fusion-900/10' 
+          ? 'bg-fusion-900/80 backdrop-blur-md shadow-lg shadow-black/10' 
           : 'bg-transparent'
       }`}
     >
@@ -47,13 +51,19 @@ export function Header() {
             alt="Kaizen Pilates Academy" 
             width={120} 
             height={40} 
-            className="h-10 w-auto"
+            className={`h-10 w-auto transition-all duration-300 ${
+              isProfilePage || scrolled ? 'logo-white' : ''
+            }`}
           />
         </Link>
         
         <Link 
           href="/trainers" 
-          className="text-fusion-700 hover:text-fusion-900 text-sm font-body transition-colors duration-300"
+          className={`text-sm font-body transition-colors duration-300 ${
+            isProfilePage || scrolled 
+              ? 'text-cream-200 hover:text-cream-100' 
+              : 'text-fusion-700 hover:text-fusion-900'
+          }`}
         >
           Trainers
         </Link>
