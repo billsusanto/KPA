@@ -9,15 +9,15 @@ export function TrainerHero({ trainer }: TrainerHeroProps) {
   const initials = trainer.name.split(' ').map(n => n[0]).join('');
   
   return (
-    <section className="relative bg-charcoal-950 pt-24 pb-16 lg:pt-28 lg:pb-24 overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/bg-kaizen.jpg)' }}
-      />
+    <section className="relative bg-charcoal-950 pt-24 pb-20 lg:pt-28 lg:pb-28 overflow-hidden">
+      {/* Gradient backdrop - replaces bg-kaizen.jpg */}
+      <div className="absolute inset-0 bg-gradient-to-b from-charcoal-800 via-charcoal-900 to-charcoal-950" />
       
-      {/* Subtle radial overlays */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-charcoal-700/30 via-transparent to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-charcoal-600/20 via-transparent to-transparent" />
+      {/* Warm accent glow behind avatar */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-gradient-radial from-charcoal-700/40 to-transparent blur-3xl" />
+      
+      {/* Subtle noise texture for premium feel */}
+      <div className="absolute inset-0 opacity-[0.15] mix-blend-overlay bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E')]" />
       
       <div className="container-mobile relative z-10">
         {/* Back link */}
@@ -31,18 +31,18 @@ export function TrainerHero({ trainer }: TrainerHeroProps) {
           <span>Back to Trainers</span>
         </Link>
 
-        {/* Avatar */}
-        <div className="relative mx-auto mb-8 w-48 h-48 lg:w-56 lg:h-56">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/10 to-charcoal-700/30 animate-pulse-glow" />
-          <div className="relative w-full h-full rounded-full bg-gradient-to-br from-charcoal-600 via-charcoal-700 to-charcoal-800 border-4 border-white/20 flex items-center justify-center overflow-hidden animate-fade-in shadow-2xl">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 to-transparent" />
-            <span className="text-7xl lg:text-8xl font-display font-bold text-white/90 relative z-10">{initials}</span>
+        {/* Avatar with enhanced glow */}
+        <div className="relative mx-auto mb-8 w-40 h-40 lg:w-52 lg:h-52">
+          <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-white/10 to-charcoal-600/20 blur-xl animate-pulse-glow" />
+          <div className="relative w-full h-full rounded-full bg-gradient-to-br from-charcoal-600 via-charcoal-700 to-charcoal-800 border-4 border-white/20 flex items-center justify-center overflow-hidden animate-fade-in shadow-2xl shadow-black/50">
+            <div className="absolute inset-0 bg-gradient-radial from-white/10 to-transparent" />
+            <span className="text-6xl lg:text-7xl font-display font-bold text-white/90 relative z-10">{initials}</span>
           </div>
         </div>
 
         {/* Trainer info */}
         <div className="text-center opacity-0 animate-fade-in-up animation-delay-200" style={{ animationFillMode: 'forwards' }}>
-          <h1 className="font-display text-4xl lg:text-5xl font-bold text-white tracking-tight">{trainer.name}</h1>
+          <h1 className="font-display text-4xl lg:text-5xl font-bold text-white tracking-tight drop-shadow-lg">{trainer.name}</h1>
           <p className="text-white/60 mt-2 text-lg font-body">{trainer.title}</p>
           <p className="text-white/80 text-base lg:text-lg mt-5 italic font-body max-w-xl mx-auto leading-relaxed">&ldquo;{trainer.tagline}&rdquo;</p>
 
@@ -79,6 +79,9 @@ export function TrainerHero({ trainer }: TrainerHeroProps) {
           )}
         </div>
       </div>
+      
+      {/* Bottom gradient fade for smooth transition to StatsBar */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-charcoal-900 to-transparent" />
     </section>
   );
 }

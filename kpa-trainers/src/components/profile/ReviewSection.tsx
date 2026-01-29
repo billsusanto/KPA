@@ -9,12 +9,23 @@ export function ReviewSection({ reviews }: ReviewSectionProps) {
   if (reviews.length === 0) return null;
 
   return (
-    <section className="py-12 lg:py-16 bg-charcoal-800">
+    <section className="py-16 lg:py-20 bg-gradient-to-b from-charcoal-950 via-charcoal-900 to-charcoal-900">
       <div className="container-mobile">
-        <h2 className="font-display text-2xl lg:text-3xl font-semibold text-white mb-8">
-          What Students Say
-        </h2>
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        {/* Enhanced section header */}
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-amber-500/20 border border-yellow-500/30 mb-4">
+            <svg className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <span className="text-yellow-200/90 text-sm font-body font-medium">Student Reviews</span>
+          </div>
+          
+          <h2 className="font-display text-2xl lg:text-3xl font-semibold text-white">
+            What Students Say
+          </h2>
+        </div>
+        
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 max-w-4xl mx-auto">
           {reviews.map((review, index) => (
             <ReviewCard key={review.id} review={review} index={index} />
           ))}
