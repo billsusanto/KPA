@@ -36,7 +36,7 @@ export function Header() {
         visible ? 'translate-y-0' : '-translate-y-full'
       } ${
         scrolled 
-          ? 'bg-gradient-to-br from-navy-700 to-navy-800 shadow-lg shadow-navy-900/30' 
+          ? 'bg-charcoal-900/95 backdrop-blur-sm shadow-lg shadow-black/20' 
           : 'bg-transparent'
       }`}
     >
@@ -47,7 +47,7 @@ export function Header() {
             alt="KPA Logo" 
             width={120} 
             height={40} 
-            className="h-10 w-auto"
+            className="h-10 w-auto logo-white"
           />
         </Link>
       </div>

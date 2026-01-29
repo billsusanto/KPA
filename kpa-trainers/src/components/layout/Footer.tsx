@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export function Footer() {
   return (
-    <footer className="bg-cream border-t border-gray-100 mt-auto">
+    <footer className="bg-charcoal-900 border-t border-charcoal-700 mt-auto">
       <div className="container-mobile py-10 text-center">
         <div className="flex justify-center mb-4">
           <Image 
@@ -10,13 +10,13 @@ export function Footer() {
             alt="KPA Logo" 
             width={120} 
             height={40} 
-            className="h-12 w-auto"
+            className="h-12 w-auto logo-white"
           />
         </div>
-        <p className="text-sm text-gray-500 mt-2 font-body">
+        <p className="text-sm text-white/60 mt-2 font-body">
           Master Trainer Showcase
         </p>
-        <p className="text-xs text-gray-400 mt-6 font-body">
+        <p className="text-xs text-white/40 mt-6 font-body">
           &copy; {new Date().getFullYear()} All rights reserved
         </p>
       </div>

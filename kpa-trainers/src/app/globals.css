@@ -3,35 +3,18 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Navy Blue palette (primary) */
-  --color-navy-50: #f0f4fa;
-  --color-navy-100: #dbe4f3;
-  --color-navy-200: #bcccea;
-  --color-navy-300: #8fa9db;
-  --color-navy-400: #5c7fc4;
-  --color-navy-500: #3d5fa8;
-  --color-navy-600: #2d4a8c;
-  --color-navy-700: #1E3A7B;
-  --color-navy-800: #1a3269;
-  --color-navy-900: #162a55;
-  --color-navy-950: #0e1b38;
-  
-  /* Red accent palette */
-  --color-accent-50: #fef2f3;
-  --color-accent-100: #fde6e8;
-  --color-accent-200: #fbd0d5;
-  --color-accent-300: #f7a8b2;
-  --color-accent-400: #f17486;
-  --color-accent-500: #e54860;
-  --color-accent-600: #C41E3A;
-  --color-accent-700: #a51a32;
-  --color-accent-800: #8a192e;
-  --color-accent-900: #771a2c;
-  --color-accent-950: #420a14;
-  
-  /* Keep cream for warmth */
-  --color-cream: #FEF9F5;
-  --color-cream-dark: #FDF5EE;
+  /* Charcoal palette (replacing navy) */
+  --color-charcoal-50: #f7f7f7;
+  --color-charcoal-100: #e3e3e3;
+  --color-charcoal-200: #c8c8c8;
+  --color-charcoal-300: #a4a4a4;
+  --color-charcoal-400: #818181;
+  --color-charcoal-500: #666666;
+  --color-charcoal-600: #515151;
+  --color-charcoal-700: #434343;
+  --color-charcoal-800: #383838;
+  --color-charcoal-900: #2d2d2d;
+  --color-charcoal-950: #1a1a1a;
   
   /* Typography */
   --font-display: 'Playfair Display', Georgia, serif;
@@ -44,7 +27,7 @@
   }
   
   body {
-    @apply bg-white text-gray-900 antialiased;
+    @apply bg-charcoal-950 text-white antialiased;
     font-family: var(--font-body);
   }
   
@@ -115,8 +98,8 @@
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(30, 58, 123, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(30, 58, 123, 0.5); }
+  0%, 100% { box-shadow: 0 0 20px rgba(56, 56, 56, 0.5); }
+  50% { box-shadow: 0 0 40px rgba(56, 56, 56, 0.8); }
 }
 
 @layer utilities {
@@ -151,25 +134,41 @@
   .animation-delay-500 { animation-delay: 500ms; }
   
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-navy-700 to-navy-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-charcoal-300;
   }
   
   .text-gradient-accent {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-500 to-accent-700;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-charcoal-400;
   }
   
   .glass {
-    @apply bg-white/80 backdrop-blur-xl;
+    @apply bg-charcoal-900/80 backdrop-blur-xl;
   }
   
   .glass-dark {
-    @apply bg-navy-900/80 backdrop-blur-xl;
+    @apply bg-charcoal-950/80 backdrop-blur-xl;
   }
+}
+
+/* Concentric circle texture overlay */
+.texture-circles {
+  background-image: 
+    radial-gradient(circle at 50% 50%, transparent 0%, transparent 30%, rgba(255,255,255,0.03) 30.5%, transparent 31%),
+    radial-gradient(circle at 50% 50%, transparent 0%, transparent 50%, rgba(255,255,255,0.03) 50.5%, transparent 51%),
+    radial-gradient(circle at 50% 50%, transparent 0%, transparent 70%, rgba(255,255,255,0.03) 70.5%, transparent 71%),
+    radial-gradient(circle at 50% 50%, transparent 0%, transparent 90%, rgba(255,255,255,0.03) 90.5%, transparent 91%);
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+/* Logo white filter */
+.logo-white {
+  filter: brightness(0) invert(1);
 }
 
 /* Skeleton loading shimmer effect */
 .skeleton {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background: linear-gradient(90deg, #383838 25%, #434343 50%, #383838 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }

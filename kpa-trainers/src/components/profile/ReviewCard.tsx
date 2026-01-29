@@ -10,14 +10,15 @@ export function ReviewCard({ review, index = 0 }: ReviewCardProps) {
   
   return (
     <article 
-      className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm border-l-4 border-accent-600 opacity-0 animate-fade-in-up"
+      className="bg-charcoal-700/50 rounded-2xl p-6 lg:p-8 shadow-sm border-l-4 border-white/30 opacity-0 animate-fade-in-up"
       style={{ animationDelay: `${index * 100}ms` }}
     >
+      {/* Star rating */}
       <div className="flex gap-1.5 mb-4">
         {Array.from({ length: 5 }).map((_, i) => (
           <svg
             key={i}
-            className={`w-5 h-5 ${i < review.rating ? 'text-accent-500' : 'text-gray-200'}`}
+            className={`w-5 h-5 ${i < review.rating ? 'text-amber-400' : 'text-charcoal-600'}`}
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -26,18 +27,20 @@ export function ReviewCard({ review, index = 0 }: ReviewCardProps) {
         ))}
       </div>
 
-      <blockquote className="text-gray-700 text-lg italic leading-relaxed mb-6 font-body">
+      {/* Quote */}
+      <blockquote className="text-white/80 text-lg italic leading-relaxed mb-6 font-body">
         &ldquo;{review.text}&rdquo;
       </blockquote>
 
+      {/* Author */}
       <footer className="flex items-center gap-4">
-        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-navy-500 to-navy-700 flex items-center justify-center flex-shrink-0">
+        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-charcoal-500 to-charcoal-700 flex items-center justify-center flex-shrink-0">
           <span className="text-white text-sm font-semibold font-display">{initials}</span>
         </div>
         <div>
-          <span className="font-medium text-gray-900 font-body">{review.author}</span>
+          <span className="font-medium text-white font-body">{review.author}</span>
           {review.date && (
-            <time className="block text-sm text-gray-500 font-body">{review.date}</time>
+            <time className="block text-sm text-white/50 font-body">{review.date}</time>
           )}
         </div>
       </footer>

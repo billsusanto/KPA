@@ -9,14 +9,19 @@ export function TrainerHero({ trainer }: TrainerHeroProps) {
   const initials = trainer.name.split(' ').map(n => n[0]).join('');
   
   return (
-    <section className="relative bg-gradient-to-br from-navy-700 via-navy-800 to-navy-900 pt-24 pb-16 lg:pt-28 lg:pb-24 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-navy-600/30 via-transparent to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-accent-500/10 via-transparent to-transparent" />
+    <section className="relative bg-gradient-to-br from-charcoal-800 via-charcoal-900 to-charcoal-950 pt-24 pb-16 lg:pt-28 lg:pb-24 overflow-hidden">
+      {/* Texture overlay */}
+      <div className="absolute inset-0 texture-circles opacity-40" />
+      
+      {/* Subtle radial overlays */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-charcoal-700/30 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-charcoal-600/20 via-transparent to-transparent" />
       
       <div className="container-mobile relative z-10">
+        {/* Back link */}
         <Link
           href="/trainers"
-          className="group inline-flex items-center gap-2 text-navy-200 hover:text-white transition-all duration-300 text-sm mb-10 font-body"
+          className="group inline-flex items-center gap-2 text-white/60 hover:text-white transition-all duration-300 text-sm mb-10 font-body"
         >
           <svg className="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -24,19 +29,22 @@ export function TrainerHero({ trainer }: TrainerHeroProps) {
           <span>Back to Trainers</span>
         </Link>
 
+        {/* Avatar */}
         <div className="relative mx-auto mb-8 w-48 h-48 lg:w-56 lg:h-56">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent-500/30 to-navy-500/30 animate-pulse-glow" />
-          <div className="relative w-full h-full rounded-full bg-gradient-to-br from-navy-500 via-navy-600 to-navy-700 border-4 border-white/20 flex items-center justify-center overflow-hidden animate-fade-in shadow-2xl">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-accent-500/20 to-transparent" />
+          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/10 to-charcoal-700/30 animate-pulse-glow" />
+          <div className="relative w-full h-full rounded-full bg-gradient-to-br from-charcoal-600 via-charcoal-700 to-charcoal-800 border-4 border-white/20 flex items-center justify-center overflow-hidden animate-fade-in shadow-2xl">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 to-transparent" />
             <span className="text-7xl lg:text-8xl font-display font-bold text-white/90 relative z-10">{initials}</span>
           </div>
         </div>
 
+        {/* Trainer info */}
         <div className="text-center opacity-0 animate-fade-in-up animation-delay-200" style={{ animationFillMode: 'forwards' }}>
           <h1 className="font-display text-4xl lg:text-5xl font-bold text-white tracking-tight">{trainer.name}</h1>
-          <p className="text-navy-200 mt-2 text-lg font-body">{trainer.title}</p>
+          <p className="text-white/60 mt-2 text-lg font-body">{trainer.title}</p>
           <p className="text-white/80 text-base lg:text-lg mt-5 italic font-body max-w-xl mx-auto leading-relaxed">&ldquo;{trainer.tagline}&rdquo;</p>
 
+          {/* Social links */}
           {(trainer.socialLinks.instagram || trainer.socialLinks.facebook) && (
             <div className="flex justify-center gap-5 mt-6">
               {trainer.socialLinks.instagram && (
@@ -44,7 +52,7 @@ export function TrainerHero({ trainer }: TrainerHeroProps) {
                   href={trainer.socialLinks.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-navy-200 hover:text-white hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                  className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/20 transition-all duration-300 hover:scale-110"
                   aria-label="Instagram"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -57,7 +65,7 @@ export function TrainerHero({ trainer }: TrainerHeroProps) {
                   href={trainer.socialLinks.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-navy-200 hover:text-white hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                  className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/20 transition-all duration-300 hover:scale-110"
                   aria-label="Facebook"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

@@ -13,15 +13,15 @@ export function VideoPlayer({ videoUrl, posterImage, trainerName }: VideoPlayerP
   const initials = trainerName.split(' ').map(n => n[0]).join('');
 
   return (
-    <section className="py-12 lg:py-16">
+    <section className="py-12 lg:py-16 bg-charcoal-950">
       <div className="container-mobile">
-        <h2 className="font-display text-2xl lg:text-3xl font-semibold text-gray-900 mb-6">
+        <h2 className="font-display text-2xl lg:text-3xl font-semibold text-white mb-6">
           Meet {trainerName}
         </h2>
-        <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-navy-700 via-navy-800 to-navy-900 shadow-xl shadow-navy-500/10">
+        <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-charcoal-800 via-charcoal-900 to-charcoal-950 shadow-xl shadow-black/20">
           {hasError ? (
             <div className="aspect-video flex flex-col items-center justify-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-navy-600/40 to-transparent" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-charcoal-700/40 to-transparent" />
               <div className="relative z-10 text-center p-8">
                 <div className="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
                   <svg className="w-10 h-10 text-white/80" fill="currentColor" viewBox="0 0 24 24">
@@ -29,7 +29,7 @@ export function VideoPlayer({ videoUrl, posterImage, trainerName }: VideoPlayerP
                   </svg>
                 </div>
                 <p className="text-white/80 text-lg font-body">Video coming soon</p>
-                <p className="text-navy-200 text-sm mt-2 font-body">Check back later to see {initials}&apos;s introduction</p>
+                <p className="text-white/60 text-sm mt-2 font-body">Check back later to see {initials}&apos;s introduction</p>
               </div>
             </div>
           ) : (
