@@ -59,7 +59,7 @@ export function Header() {
         
         <Link 
           href="/trainers" 
-          className={`text-sm font-body transition-colors duration-300 ${
+          className={`text-xl font-accent transition-colors duration-300 ${
             isProfilePage && !scrolled 
               ? 'text-cream-200 hover:text-cream-100' 
               : 'text-fusion-700 hover:text-fusion-900'
