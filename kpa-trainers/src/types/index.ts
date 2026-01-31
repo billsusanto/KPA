@@ -1,6 +1,7 @@
 export interface MasterTrainer {
   id: string;
   name: string;
+  displayName: string;
   title: string;
   tagline: string;
   profileImage: string;

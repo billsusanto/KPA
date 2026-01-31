@@ -62,9 +62,9 @@ export default async function TrainerPage({ params }: TrainerPageProps) {
       <StatsBar stats={trainer.stats} />
       <VideoPlayer
         videoUrl={trainer.introVideo}
-        trainerName={trainer.name}
+        trainerName={trainer.displayName}
       />
-      <Biography biography={trainer.biography} name={trainer.name} />
+      <Biography biography={trainer.biography} name={trainer.displayName} />
       <Certifications
         certifications={trainer.certifications}
         specializations={trainer.specializations}
